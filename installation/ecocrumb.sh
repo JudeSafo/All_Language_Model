@@ -52,7 +52,7 @@ num_topics=${2:-15}
 
 # If train mode is enabled, run the generate_topics.sh script
 if [ "$train" -eq 1 ]; then
-  "$SCRIPT_DIR/esgetlpipeline/src/generate_topics.sh"
+  "$SCRIPT_DIR/../esgetlpipeline/src/generate_topics.sh"
 fi
 
 # If batch mode is enabled, process each folder in the directory
@@ -108,7 +108,7 @@ if [ $txt_file_count -eq 0 ]; then
   echo "$(date +'%Y-%m-%d %H:%M:%S') - Converting all PDFs in $target_directory to plaintext files"
   echo "ECHO! - plaintext_directory: $plaintext_directory output_directory: $output_directory"
   # python main.py -i $target_directory -o $plaintext_directory
-  ./esgetlpipeline/src/pdf_to_text.sh $target_directory $plaintext_directory
+  ./../esgetlpipeline/src/pdf_to_text.sh $target_directory $plaintext_directory
 else
   echo "$(date +'%Y-%m-%d %H:%M:%S') - Skipping PDF conversion as .txt files already exist in $plaintext_directory"
 fi
@@ -135,7 +135,7 @@ for file in $plaintext_directory/*.txt; do
   if [ ! -f "$topics_features_file" ] || [ "$force" -eq 1 ]; then
     # Generate topics_features.json
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Generating topics_features.json for $filename"
-    "$SCRIPT_DIR/esgetlpipeline/src/run_topic_modeling.sh" "$file" 15 "$topics_features_file"
+    "$SCRIPT_DIR/../esgetlpipeline/src/run_topic_modeling.sh" "$file" 15 "$topics_features_file"
   else
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Skipping topics_features generation for $filename, file already exists"
   fi
@@ -153,4 +153,4 @@ done
 
 # Copy contents of parsed_sections to results/ and esg_LanguageModel/src
 cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/results/"
-cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/esg_LanguageModel/src/"
+cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/../esg_LanguageModel/src/"
