@@ -17,7 +17,11 @@ To install the `ecocrumb` exec, simply:
 2. Run the following command to clone the repository and install everything:
 
    ```bash
-   curl -sSf https://github.com/JudeSafo/All_Language_Model/install.sh | bash
-   ```
+   curl -H "Authorization: token YOUR_GITHUB_TOKEN" -o install.sh -sSf https://api.github.com/repos/JudeSafo/All_Language_Model/contents/install.sh | bash
 
+   ```
+or
+
+```git
+git clone https://github.com/JudeSafo/All_Language_Model/ && 
 
