@@ -1,0 +1,69 @@
+{
+  "Resource Use and Circularity": [],
+  "Product Packaging": [
+    [
+      [
+        "packaging",
+        "etc",
+        "strive"
+      ],
+      1
+    ]
+  ],
+  "Product Design": [],
+  "Supplier ESG Management": [],
+  "Product Health and Safety": [],
+  "Marketing and Labeling": [],
+  "Biodiversity and Land Use": [],
+  "Climate Change Impacts": [
+    [
+      [
+        "change",
+        "regularly"
+      ],
+      1
+    ]
+  ],
+  "GHG Emissions": [],
+  "Air Quality": [],
+  "Waste": [],
+  "Water and Wastewater": [],
+  "Diversity, Equity and Inclusion": [],
+  "Human and Labor Rights": [],
+  "Talent Management and Training": [
+    [
+      [
+        "talent",
+        "background",
+        "perspective"
+      ],
+      1
+    ]
+  ],
+  "Employee Health and Safety": [],
+  "Data Security and Privacy": [],
+  "Food Waste and Security": [],
+  "Community Engagement": [],
+  "Governing Body": [],
+  "ESG Oversight": [],
+  "Ethics and Compliance": [],
+  "Economic Contribution": [],
+  "Tax Transparency": [
+    [
+      [
+        "ensuring",
+        "transparency"
+      ],
+      1
+    ],
+    [
+      [
+        "relative",
+        "ensuring",
+        "transparency"
+      ],
+      1
+    ]
+  ],
+  "Value of Sustainable Innovation": []
+}
