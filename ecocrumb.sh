@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 force=0
 batch=0
 train=0
@@ -49,7 +52,7 @@ num_topics=${2:-15}
 
 # If train mode is enabled, run the generate_topics.sh script
 if [ "$train" -eq 1 ]; then
-  ./esgetlpipeline/src/generate_topics.sh
+  "$SCRIPT_DIR/esgetlpipeline/src/generate_topics.sh"
 fi
 
 # If batch mode is enabled, process each folder in the directory
@@ -58,9 +61,9 @@ if [ "$batch" -eq 1 ]; then
     if [ -d "$folder" ]; then
       echo "Processing folder: $folder"
       if [ "$force" -eq 1 ]; then
-        ./ecocrumb.sh --force "$folder" "$num_topics"
+        "$SCRIPT_DIR/ecocrumb.sh" --force "$folder" "$num_topics"
       else
-        ./ecocrumb.sh "$folder" "$num_topics"
+        "$SCRIPT_DIR/ecocrumb.sh" "$folder" "$num_topics"
       fi
       echo "Finished processing folder: $folder"
     fi
@@ -132,7 +135,7 @@ for file in $plaintext_directory/*.txt; do
   if [ ! -f "$topics_features_file" ] || [ "$force" -eq 1 ]; then
     # Generate topics_features.json
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Generating topics_features.json for $filename"
-    ./esgetlpipeline/src/run_topic_modeling.sh $file 15 "$topics_features_file"
+    "$SCRIPT_DIR/esgetlpipeline/src/run_topic_modeling.sh" "$file" 15 "$topics_features_file"
   else
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Skipping topics_features generation for $filename, file already exists"
   fi
@@ -141,7 +144,7 @@ for file in $plaintext_directory/*.txt; do
   if [ ! -f "$parsed_sections_file" ] || [ "$force" -eq 1 ]; then
     # Generate parsed_sections.json
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Generating parsed_sections.json for $filename"
-    ./esgetlpipeline/src/parse_by_topic.sh "$file" "$topics_features_file" "$parsed_sections_file"
+    "$SCRIPT_DIR/esgetlpipeline/src/parse_by_topic.sh" "$file" "$topics_features_file" "$parsed_sections_file"
   else
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Skipping parsed_sections generation for $filename, file already exists"
   fi
@@ -149,5 +152,5 @@ for file in $plaintext_directory/*.txt; do
 done
 
 # Copy contents of parsed_sections to results/ and esg_LanguageModel/src
-cp -r "$parsed_sections_directory"/* ./results/
-cp -r "$parsed_sections_directory"/* ./esg_LanguageModel/src/
+cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/results/"
+cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/esg_LanguageModel/src/"

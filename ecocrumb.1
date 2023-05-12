@@ -1,0 +1,75 @@
+ECOCRUMB(1)                 User Commands                 ECOCRUMB(1)
+
+NAME
+       ecocrumb - Process target directories, convert PDFs to plaintext,
+       generate topics_features.json and parsed_sections.json
+
+SYNOPSIS
+       ecocrumb [--force] [--batch] [--train] <target_directory> [num_topics]
+
+DESCRIPTION
+       The ecocrumb script is a utility for processing target directories,
+       converting PDFs to plaintext files, and generating topics_features.json
+       and parsed_sections.json files. It provides options to force
+       regeneration of files, batch process multiple folders, and run the
+       generate_topics.sh script.
+
+OPTIONS
+       --force
+              Forces regeneration of the topics_features.json and
+              parsed_sections.json files, even if they already exist.
+
+       --batch
+              Processes each folder within the target_directory separately.
+
+       --train
+              Enables the generation of topics_features.json using the
+              generate_topics.sh script.
+
+ARGUMENTS
+       <target_directory>
+              The directory or path to the target directory to be processed.
+
+       [num_topics]
+              The number of topics to generate. Default value: 15.
+
+       Note:   The square brackets [] indicate optional arguments.
+
+EXAMPLES
+       1. Process a single target directory:
+          $ ecocrumb target_dir
+
+       2. Process a target directory with a specific number of topics:
+          $ ecocrumb target_dir 10
+
+       3. Force regeneration and process a target directory:
+          $ ecocrumb --force target_dir
+
+       4. Batch process multiple folders within a target directory:
+          $ ecocrumb --batch target_dir
+
+       5. Enable training mode and process a target directory:
+          $ ecocrumb --train target_dir
+
+NOTES
+       - The script requires the esgetlpipeline scripts to be present in the
+         same directory as the ecocrumb script.
+
+       - The output directories 'topics_features' and 'parsed_sections' will
+         be created within the target_directory.
+
+       - The 'plaintext' directory will be created within the target_directory
+         to store converted plaintext files.
+
+       - The 'results/' and 'esg_LanguageModel/src/' directories will be
+         created within the directory where the ecocrumb script is located,
+         and the parsed_sections files will be copied to those directories.
+
+SEE ALSO
+       generate_topics.sh(1), parse_by_topic.sh(1)
+
+AUTHOR
+       Written by Your Name.
+
+COPYRIGHT
+       This script is licensed under the MIT License.
