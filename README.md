@@ -8,10 +8,6 @@ The Ecocrumb (End-to-End) script is a utility script that automates the processi
 
 This repository contains an encrypted binary and its associated man page for the `ecocrumb` script. Follow the instructions below to get started and install the necessary components on macOS or Linux machines.
 
-## Prerequisites
-
-- `curl` command-line tool
-
 ## Installation
 
 To install the `ecocrumb` exec, simply:
