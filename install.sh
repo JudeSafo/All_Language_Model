@@ -1,10 +1,16 @@
 #!/bin/bash
 
-# Clone the repository
-git clone https://github.com/JudeSafo/All_Language_Model
+# Check if script is being run from within the repository folder
+if [[ $(basename "$PWD") == "All_Language_Model" ]]; then
+    REPO_FOLDER="$PWD"
+else
+    # Clone the repository
+    git clone https://github.com/JudeSafo/All_Language_Model
+    REPO_FOLDER="$PWD/All_Language_Model"
+fi
 
-# Move into the cloned repository directory
-cd All_Language_Model
+# Move into the repository directory
+cd "$REPO_FOLDER"
 
 # Install shc if not already installed
 if ! command -v shc >/dev/null 2>&1; then
@@ -23,7 +29,7 @@ fi
 # Encrypt the shell script using shc
 shc -f ecocrumb.sh
 
-# Move the encrypted binary to appropriate location
+# Move the encrypted binary to the appropriate location
 if [[ "$OSTYPE" == "darwin"* ]]; then
     sudo mv ecocrumb.sh.x /usr/local/bin/ecocrumb
     sudo mv ecocrumb.1 /usr/local/share/man/man1/
