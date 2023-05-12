@@ -14,13 +14,14 @@ This repository contains an encrypted binary and its associated man page for the
 
 ## Installation
 
-To install the encrypted binary and man page, follow these steps:
+To install the `ecocrumb` exec, simply:
 
 1. Open Terminal on your macOS or Linux machine.
 
 2. Run the following command to clone the repository and install everything:
 
    ```bash
-   curl -o install.sh https://github.com/JudeSafo/All_Language_Model/install.sh && chmod +x install.sh && ./install.sh
+   curl -sSf https://github.com/JudeSafo/All_Language_Model/install.sh | bash
+   ```
 
 
