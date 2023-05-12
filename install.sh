@@ -35,4 +35,10 @@ fi
 # Generate the man page database
 sudo mandb
 
+# Return to the original directory
+cd ..
+
+# Clean up cloned repository
+rm -rf All_Language_Model
+
 echo "Installation completed successfully."
