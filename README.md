@@ -1,50 +1,26 @@
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/569/badge)](https://bestpractices.coreinfrastructure.org/projects/569)<br>
 
-# Ecocrumb - ESG Reporting
+# Ecocrumb - ESG Reporting Handler
 
 The Ecocrumb (End-to-End) script is a utility script that automates the processing of PDF files to generate topics and parsed sections data. It utilizes other supporting scripts such as `pdf_to_text.sh`, `run_topic_modeling.sh`, and `parse_by_topic.sh`.
 
+# Getting Started with All_Language_Model
+
+This repository contains an encrypted binary and its associated man page for the `ecocrumb` script. Follow the instructions below to get started and install the necessary components on macOS or Linux machines.
+
 ## Prerequisites
 
-- Linux or macOS operating system
-- Bash shell (version 4.x or later)
-- `pdf_to_text.sh` script
-- `run_topic_modeling.sh` script
-- `parse_by_topic.sh` script
-- Python 3.x (with required dependencies)
-- jq (a lightweight command-line JSON processor)
+- `curl` command-line tool
 
-## Usage
+## Installation
 
-```bash
-./ecocrumb.sh -i <target_directory_or_file> [-o output_directory] [-f] [-n number] [-b]
-```
+To install the encrypted binary and man page, follow these steps:
 
-- `-i <target_directory_or_file>`: Specifies the target directory or file to process. For batch mode, provide the path to a directory containing PDF files. For individual mode, provide the path to a single PDF file.
-- `-o output_directory`: (Optional) Specifies the output directory where the generated files will be saved. If not provided, the output will be stored in the same directory as the target.
-- `-f`: (Optional) Forces the script to overwrite existing output files.
-- `-n number`: (Optional) Specifies the number of topics for topic modeling. The default value is 15.
-- `-b`: (Optional) Enables batch mode, allowing the script to process multiple files in the target directory.
+1. Open Terminal on your macOS or Linux machine.
 
-## Examples
+2. Run the following command to clone the repository and install everything:
 
-### Individual Mode
+   ```bash
+   curl -o install.sh https://github.com/JudeSafo/All_Language_Model/install.sh && chmod +x install.sh && ./install.sh
 
-To process a single PDF file:
-
-```bash
-./ecocrumb.sh -i path/to/myfile.pdf
-```
-
-This will convert the PDF file to plaintext, generate topics and parsed sections, and save the output in the same directory as the input file.
-
-### Batch Mode
-
-To process all PDF files in a directory:
-```bash
-./ecocrumb.sh -i path/to/my_directory -o path/to/output_directory -f -b -n 20
-```
-
-
-This will convert all PDF files in the specified directory to plaintext, generate topics and parsed sections for each file, and save the output in the specified output directory. The `-f` flag forces overwriting of existing output files. The `-n` flag sets the number of topics to 20.
 
