@@ -14,14 +14,14 @@ To install the `ecocrumb` exec, simply:
 
 1. Open Terminal on your macOS or Linux machine.
 
-2. Run the following command to clone the repository and install everything:
+2. For the most up to date installation from Haiphen (pi@haiphenia.com):
 
    ```bash
    curl -H "Authorization: token YOUR_GITHUB_TOKEN" -o install.sh -sSf https://api.github.com/repos/JudeSafo/All_Language_Model/contents/install.sh | bash
 
    ```
-   or
+   or download locally via
 
    ```git
-   git clone https://github.com/JudeSafo/All_Language_Model/ && 
+   git clone https://github.com/ecocrumb/final_deliverables/ && ./install.sh 
 
