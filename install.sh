@@ -7,6 +7,7 @@ else
     # Clone the repository
     git clone https://github.com/JudeSafo/All_Language_Model
     REPO_FOLDER="$PWD/All_Language_Model"
+    cd "$REPO_FOLDER"
 fi
 
 # Move into the repository directory
