@@ -1,3 +1,5 @@
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/569/badge)](https://bestpractices.coreinfrastructure.org/projects/569)<br>
+
 # Ecocrumb - ESG Reporting
 
 The Ecocrumb (End-to-End) script is a utility script that automates the processing of PDF files to generate topics and parsed sections data. It utilizes other supporting scripts such as `pdf_to_text.sh`, `run_topic_modeling.sh`, and `parse_by_topic.sh`.
