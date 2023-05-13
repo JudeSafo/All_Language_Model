@@ -85,7 +85,7 @@ Run the following:
 
 here's what each term is doing:
 
-- `data/` this specify the target company folder or set of company folders to process
+- `data/` this specifies the target company folder or set of company folders to process
 - `[20]` optional, this specifies the number of subtopics to associate to each major topic. This number can be as large as you chose.
 - `[--force]` optional, overwrite any existing data found in the folder
 - `[--batch]` optional, for processing multiple companies at once. Else specify individual company folder (e.g. data/Starbucks)
