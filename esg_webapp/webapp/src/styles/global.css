@@ -1,0 +1,52 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+header {
+  grid-column: 1 / -1;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Reverse column sizes */
+}
+
+.pdf-viewer {
+  padding: 1rem;
+  border-left: 1px solid #444;
+  display: flex; /* Center the PDF object */
+  justify-content: center;
+  align-items: center;
+}
+
+.query-section {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+.query-section textarea {
+  width: 80%; /* Set the width of the textarea to 80% of the column width */
+  max-width: 80%; /* Set the maximum width of the textarea to 80% of the column width */
+}
+
+/* Round corners for buttons, boxes, etc. */
+button, textarea {
+  border-radius: 5px; /* Adjust the value as needed */
+}
