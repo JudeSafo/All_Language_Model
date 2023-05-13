@@ -66,7 +66,7 @@ Verify correct installation:
 ecocrumb --version
 v0.0.1
 ```
-and verify documentation
+inspect documentation
 
 ```bash
 man ecocrumb
