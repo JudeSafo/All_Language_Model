@@ -127,7 +127,7 @@ _Note_:make certain your (venv) is active or you will encounter errors.
 
 ### How to fine tune the model over time?
 
-The content of esg_LanguageModel folder outline this all work done around model training. Proper fine tuning will require gpu or tpu hard drive and additional engagement from users to source training data.
+The content of esg_LanguageModel folder outline this all work done around model training. Full model training will require gpu or tpu hardware and additional engagement from users to source training data.
 
 ## Conclusion
 
