@@ -157,6 +157,7 @@ Code Base<br>
 > Total lines of code - 1,786,759<br>
 > Word Count - 11,659,299<br>
 > Hours commited - > 500 hours<br>
+
 Reports<br>
 > ESG Report count - 924 (541 food & hotel companies, 383 others)<br>
 > ESG Company count - 249 (129 food & hotel; 120 others)<br>
