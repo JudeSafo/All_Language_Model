@@ -23,12 +23,12 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
     "json_file": "KraftHeinz-2022-ESG-Report_parsed_sections.json"
 }' http://3.133.103.207/answer_question
 ```
-_Input:_ 
-`text` field, containing the users query
-`mode` field, mode dictates whether to 'lengthen' (by concating input to model summary) or shorten (provide relevant summary) of user input. This is only relevant for the `generate_summary` endpoint
-`json_file` field, provides the pointer to the appropriate json representing the ESG company report in question. This allows the model to hotswap between different company data without having to store each of them in memory. 
-_Response:_
-the model response in each case is a json containing either an `answer` or `summary` field (depending on the endpoint), a `relevant_search_terms` field and a `reference_paragraph`.
+> _Input:_ 
+> `text` field, containing the users query
+> `mode` field, mode dictates whether to 'lengthen' (by concating input to model summary) or shorten (provide relevant summary) of user input. This > is only relevant for the `generate_summary` endpoint
+>`json_file` field, provides the pointer to the appropriate json representing the ESG company report in question. This allows the model to hotswap > between different company data without having to store each of them in memory. 
+> <br><br>_Response:_
+> the model response in each case is a json containing either an `answer` or `summary` field (depending on the endpoint), a `relevant_search_terms` > field and a `reference_paragraph`.
 4. **_esg_webapp_** - A lightweight next.js wrapper for rendering the language model in a user friendly interface. 
 
 # Getting Started 
