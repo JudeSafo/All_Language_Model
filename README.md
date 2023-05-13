@@ -29,7 +29,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
 >`json_file` field, provides the pointer to the appropriate json representing the ESG company report in question. This allows the model to hotswap > between different company data without having to store each of them in memory. 
 > <br><br>**_Response:_**
 > the model response in each case is a json containing either an `answer` or `summary` field (depending on the endpoint), a `relevant_search_terms` > field and a `reference_paragraph`.
-4. **_esg_webapp_** - A lightweight next.js wrapper for rendering the language model in a user friendly interface. 
+4. **_esg_webapp_** - A lightweight next.js wrapper for rendering the language model in a user friendly interface (http://18.219.52.58:3000/). 
 
 # Getting Started 
 
