@@ -162,4 +162,10 @@ done
 
 # Copy contents of parsed_sections to results/ and esg_LanguageModel/src
 cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/results/"
-cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/../esg_LanguageModel/src/"
+cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/../esg_LanguageModel/webapp/src/"
+
+# Set alias
+alias ecocrumb='$PWD/setup/./ecocrumb.sh'
+source ~/.bashrc
+
+
