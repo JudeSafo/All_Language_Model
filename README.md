@@ -145,7 +145,7 @@ Sincerely, Jude Safo, Haiphen:pi@haiphenai.com
 | ✅ | ESG report entity extraction and report automation | Entity Extraction | Grab entities/topics, parse data | [Github](https://github.com/example), Mongodb, Instructions | 04/15 |
 | ✅ | ESG report entity extraction and report automation | ETL Pipeline | bash script | [Github](https://github.com/example) | 04/20 |
 | ✅ | ESG report entity extraction and report automation | Metrics | Tfidf sorting, llm rankings |  | 05/05 |
-| ✅ | ESG report entity extraction and report automation | LLM | lengthen, shorten, summarize | [Github](https://github.com/example) | 04/28 |
+| ✅ | ESG report entity extraction and report automation | LLM | lengthen, shorten, summarize | [Github]([https://github.com/example](https://github.com/ecocrumb/esg_LanguageModel)) | 04/28 |
 | ✅ | ESG report entity extraction and report automation | Software Bill of Materials | Full list of software used during this | [Github](https://github.com/example) | 04/20 |
 | ✅ | ESG report entity extraction and report automation | Webapp (Not in original scope) | Interactive webapp | [Github](https://github.com/example) | 05/05 |
 | ✅ | ESG report entity extraction and report automation | Question-Answer Model (Not in original scope) | Secondary ml model | [Github](https://github.com/example) | 05/05 |
