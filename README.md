@@ -107,13 +107,12 @@ Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/e
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/9dbeb8f4-1d9d-4900-9b20-8656159bff12)
 
 2. - Append the number of topics when invoking `ecocrumb data/Starbucks 10`
-![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/535253c2-6170-433f-8b5e-f54bd8c94108)
 
-The default is set to 15. The number is a bit misleading because it the largest number of subtopics that can be affiliated with a given topic. The subtopics generation are done via `tfidf` ranking as seen in the `esgetlpipeline/src/utils.py` under TokenTfidfExtractor. In practice anything more than 30 will show signifcant impact on model performance so experiment for yourself first.
+The default, if nothing is passed, is 15. The number is a bit misleading because it represents the largest number of subtopics that can be affiliated with a given topic. The subtopics generation are done via `tfidf` ranking as seen in the `esgetlpipeline/src/utils.py` under `TokenTfidfExtractor`. In practice anything more than 30 will show signifcant impact on model performance so experiment for yourself first.
 
 ## Serving model
 This is largely user preference. 
-To test locally you simply need to navigate to `esg_LanguageModel/webb/src` and run the following:
+To test and serve locally you simply need to navigate to `esg_LanguageModel/webapp/src` and run the following:
 ```python
 uvicorn app:app --reload
 ```
