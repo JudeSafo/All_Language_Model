@@ -152,7 +152,7 @@ Haiphen:pi@haiphenai.com
 | ✅ | ESG report entity extraction and report automation | Question-Answer Model (Not in original scope) | Secondary ml model | [Github](https://github.com/example) | 05/05 |
 | ✅ | ESG report entity extraction and report automation | Automation handler (Not in original scope) | bash exec automate various components of project | [Github](https://github.com/example) | 05/12 |
 
-**Fun Stats**<br>
+#### Fun Stats
 Code Base<br>
 > Total lines of code - 1,786,759<br>
 > Word Count - 11,659,299<br>
