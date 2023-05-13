@@ -31,15 +31,15 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
 > the model response in each case is a json containing either an `answer` or `summary` field (depending on the endpoint), a `relevant_search_terms` > field and a `reference_paragraph`.
 4. **_esg_webapp_** - A lightweight next.js wrapper for rendering the language model in a user friendly interface (http://18.219.52.58:3000/). 
 
-# Getting Started 
+## Getting Started 
 
 After installation you'll want to process and load data into the language model, then use that to serve the mode. 
 
-## Requirements
+### Requirements
 - macosx/linux os (Debian preferred)
 - (optional) aws ec2 VM
 
-## Installation
+### Installation
 
 To install the `ecocrumb` exec:
 
@@ -58,7 +58,7 @@ To install the `ecocrumb` exec:
    
 3. (ven) `source bin/activate` or `pip install -r requirements.txt` the necessary depednencies
 
-## Verify Correct Installation
+### Verify Correct Installation
 
 Verify correct installation:
 ```bash
@@ -73,7 +73,7 @@ man ecocrumb
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/e5db33b9-6e7b-4156-92b1-093594ae6d21)
 _Note_: Installation has been seperately tested and verified on a `macosx` and `debian` os. 
 
-## Basics
+### Basics
 
 Let's process the company `Kellog's` entire ESG report folder and convert this into a machine readable json ending in the suffix _modified_parsed_sections.json_. We will use these jsons to pass as arguments to our language model.
 
@@ -93,12 +93,12 @@ Take a look at the 3 subfolders created during this process `plaintext`, `parsed
 
 You will also see updates to the `results` and `esg_languagemodel/webapp/src` folder. This serves the secondary purpose such that the next time you reload your webapp you will now have access to your newly generated company data.
 
-# Add New Company Data
+## Add New Company Data
 
 Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on [s3]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)), [google drive]([url](https://drive.google.com/drive/u/3/folders/1kMDQ8xlPyx4_-JsBc-3DE0OrBDxVOYOc)) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/170e6e8d-8c65-4340-ade6-da1ff3fe44e1)
 
-## How to improve model behavior by adding additional keywords?
+### How to improve model behavior by adding additional keywords?
 
 `Topics` are just expressions you want or expect to see in the ESG report of your company (e.g. "supply chain", "child labor", "employee rights"). They are typically 2 words but not limited to this. They span anywhere from 1 - 4 words. We can change the topics set of topics in 1 of two ways: 
 1. - Add additional keywords manually to the `pick_esg_topics.csv` file then running the exec in training mode `ecocrumb --train data/Starbucks` as follows
@@ -110,7 +110,7 @@ Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/e
 
 The default, if nothing is passed, is 15. The number is a bit misleading because it represents the largest number of subtopics that can be affiliated with a given topic. The subtopics generation are done via `tfidf` ranking as seen in the `esgetlpipeline/src/utils.py` under `TokenTfidfExtractor`. In practice anything more than 30 will show signifcant impact on model performance so experiment for yourself first.
 
-## Serving model
+### Serving model
 This is largely user preference. 
 To test and serve locally you simply need to navigate to `esg_LanguageModel/webapp/src` and run the following:
 ```python
@@ -118,20 +118,20 @@ uvicorn app:app --reload
 ```
 make certain your (venv) is active or you will encounter errors.
 
-## List of AWS architecture
+### List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
 (pem key provided seperately for security)
 
-## How to fine tune the model over time?
+### How to fine tune the model over time?
 
 The content of esg_LanguageModel folder outline this all work done around model training. Proper fine tuning will gpu or tpu hard drive and additional question/user responses.
 
-# Conclusion
+## Conclusion
 
 The biggest focus for you short term should be experimenting with keywords and number of topics. 
 pi@haiphenai.com 
 
-## Miscellaneous
+### Miscellaneous
 | Project | Task | Descrip. | Assets | Date |
 |---------|------|----------|--------|------|
 | ESG report entity extraction and report automation | ESG Crawler | Grab raw data | [Github](https://github.com/example), S3, ec2 | 04/08 |
