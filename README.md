@@ -2,33 +2,50 @@
 
 # Ecocrumb - ESG Reporting Handler
 
-The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data and eventually train a language model. ESG reports are almost always pdf files (rarely .ppt or .pptx). The work contained in the various folders can be summarized as follows:
-1. _esgreportcrawler_ - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are good company related
+The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data and eventually train a language model. ESG reports are almost always pdf files (rarely .ppt or .pptx). 
+The folders contain work from the various stages of the project are summarized as follows:
+1. _esgreportcrawler_ - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are 'food or hotel' related
+2. _esgetlpipeline_ - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
+3. _esg_language model_ - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this). The two endpoints for this model are `answer_question` and `generate_summary`:
+```bash
+$ curl -X POST -H "Content-Type: application/json" -d '{
+    "text": "Kraft Heinz approach to efficiency projects?",
+    "mode": "lengthen",
+    "json_file": "KraftHeinz-2022-ESG-Report_parsed_sections.json"
+}' http://3.133.103.207/generate_summary
+
+$ curl -X POST -H "Content-Type: application/json" -d '{
+    "text": "Kraft Heinz approach to efficiency projects?",
+    "mode": "lengthen",
+    "json_file": "KraftHeinz-2022-ESG-Report_parsed_sections.json"
+}' http://3.133.103.207/answer_question
+```
+4. _esg_webapp_ - A lightweight next.js wrapper for rendering the language model
 
 # Getting Started 
 
-This repository contains all of the components
+We'll first start off with how to process and load data into the language model, then serving and training. The webapp is provided as is.
 
 ## Requirements
 - macosx
-- linux os (debian preferred0
+- linux os (Debian preferred)
 - aws ec2 virtual machine
 
 ## Installation
 
 To install the `ecocrumb` exec:
 
-1. Open a terminal session on your macOS (cmd + space - terminal) or Linux machine.
+1. Open a terminal session on your macOS (cmd + space - search 'terminal') or Linux machine.
 
 2. For the most up to date installation from Haiphen (Jude Safo - pi@haiphenia.com):
 
    ```bash
    curl -H "Authorization: token YOUR_GITHUB_TOKEN" -o install.sh -sSf https://api.github.com/repos/JudeSafo/All_Language_Model/contents/install.sh | bash
    ```
-   or download [here](https://github.com/ecocrumb/esg_deliverables) via github:
+   or download [here](https://github.com/ecocrumb/All_Language_Model) via github:
 
    ```git
-   git clone https://github.com/ecocrumb/esg_deliverables/ && cd esg_deliverables && ./install.sh 
+   git clone https://github.com/ecocrumb/All_Language_Model/ && cd All_Language_Model && ./install.sh 
    ```
    
 3. (ven) `source bin/activate` or `pip install -r requirements.txt` the necessary depednencies
@@ -50,9 +67,20 @@ Note: Installation has been seperately tested and verified on a `macosx` and `de
 
 ## Basics
 
-Let's process the company `Kellog's` entire ESG report folder and convert this into a machine readable json ending in the suffix _modified_parsed_sections.json_
+Let's process the company `Kellog's` entire ESG report folder and convert this into a machine readable json ending in the suffix _modified_parsed_sections.json_ as well as the topics extracted from that document
 We will use these jsons to pass as arguments to our language model.
 
+Run the following:
+```bash
+(etlpipeline) $ ecocrumb --force --batch --train data/ 100
+```
+
+here's what each term is doing:
+- `[--force]` optional, overwrite any existing data found in the folder
+- `[--batch]` optional, for processing multiple companies at once. Else specify individual company folder (e.g. data/Starbucks)
+- `[--train]` option, 
+
+After running you will see updates to the `data`, `results` and `
 # Add New Company Data
 
 Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on s3, [google drive](url) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
