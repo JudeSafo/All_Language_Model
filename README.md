@@ -9,7 +9,8 @@ To assist with knowledge transfer as we finalize our work I've added a Ecocrumb 
 The project span just over 1 month containing within it, many discrete sub-projects. The sub-folders containing work from the various stages of the project are summarized as follows:
 1. **_esgreportcrawler_** - used to curate the data needed for the remainder of this project. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were obtained using this crawler, 541 of which are 'food or hotel' related.  ESG reports are almost always pdf files (occasionally .ppt or .pptx). 
 2. **_esgetlpipeline_** - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
-3. **_esg_language model_** - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this). The two endpoints for this model are `answer_question` and `generate_summary`:
+3. **_esg_language model_** - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this).<br>
+The two endpoints for this model are `answer_question` and `generate_summary`:
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -d '{
     "text": "Kraft Heinz approach to efficiency projects?",
