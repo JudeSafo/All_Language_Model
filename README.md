@@ -60,7 +60,7 @@ To install the `ecocrumb` exec:
 
 ## Verify Correct Installation
 
-Verify correct installation via:
+Verify correct installation:
 ```bash
 ecocrumb --version
 v0.0.1
