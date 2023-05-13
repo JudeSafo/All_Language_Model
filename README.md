@@ -25,3 +25,10 @@ To install the `ecocrumb` exec, simply:
    ```git
    git clone https://github.com/ecocrumb/esg_deliverables/ && cd esg_deliverables && ./install.sh 
 
+## Basics
+
+Verify correct installation via:
+```bash
+ecocrumb --version
+
+```
