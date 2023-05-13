@@ -2,7 +2,8 @@
 
 # Ecocrumb - ESG Reporting Handler
 
-The Ecocrumb (End-to-End) script is a utility script that automates the processing of PDF files to generate topics and parsed sections data. It utilizes other supporting scripts such as `pdf_to_text.sh`, `run_topic_modeling.sh`, and `parse_by_topic.sh`.
+The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work. the processing of PDF files to generate topics and parsed sections data. ESG reports are almost always pdf files (rarely .ppt or .pptx). The work contained in the various folders can be summarized as follows:
+1. _esgreportcrawler_ - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are good company related
 
 # Getting Started 
 
@@ -47,9 +48,24 @@ man ecocrumb
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/13cceaaf-8bba-4132-a45d-5ffae7e42f0b)
 Note: Installation has been seperately tested and verified on a `macosx` and `debian` os.
 
+## Basics
+
+Let's process the company `Kellog's` entire ESG report folder and convert this into a machine readable json ending in the suffix _modified_parsed_sections.json_
+We will use these jsons to pass as arguments to our language model.
+
 # Add New Company Data
 
 Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on s3, [google drive](url) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
+![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/f5249fc9-e1aa-4885-ace6-c480c8933e8f)
 
-## Define Topics
+## Define/Add Topics
+
+`Topics` are just expressions you want or expect to see in the ESG report of your company (e.g. "supply chain", "child labor", "employee rights"). They are typically 2 words but not limited to this. They span anywhere from 1 - 4 words. We can change the topics set of topics in 1 of two ways: 
+1. - Add additional keywords manually to the `pick_esg_topics.csv` file then running the exec in training mode `ecocrumb --train data/Starbucks`
+![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/d0a3cbd0-5e07-4400-8505-2917017b14fa)
+![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/9dbeb8f4-1d9d-4900-9b20-8656159bff12)
+
+3. - Append the number of topics when invoking `ecocrumb data/Starbucks 10`
+
+The default is set to 15. The number is a bit misleading because it the largest number of subtopics that can be affiliated with a given topic. The subtopics generation are done via `tfidf` ranking as seen in the `esgetlpipeline/src/utils.py` under TokenTfidfExtractor. In practice anything more than 30 will show signifcant impact on model performance so experiment for yourself first.
 
