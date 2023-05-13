@@ -2,10 +2,10 @@
 
 # Ecocrumb - ESG Reporting Handler
 
-To assist with knowledge transfer as we finalize our work I've added a Ecocrumb (End-to-End) executable, `ecococrumb`, a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data,language model training. The language model was one of the key deliverables of this work: accepting a user input text in the form of a question or idea and returning an answer or summary based on relevant material found in the ESG document. 
+To assist with knowledge transfer as we finalize our work I've added a Ecocrumb (End-to-End) executable, `ecococrumb`, a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data,language model training, model hosting and webapp updating. The language model, one of the key deliverables of this work, accepts a user input text in the form of a question or unfinished thought and returns an answer or summary based on relevant material found in the ESG document. 
 
 ![Snip20230506_67](https://github.com/JudeSafo/All_Language_Model/assets/9307673/c3fc1d98-042e-4b7b-a8ee-dfe690a4ed41)
-The sub-folders containing work from the various stages of the project are summarized as follows:
+The project span just over 1 month containing within it, many discrete sub-projects. The sub-folders containing work from the various stages of the project are summarized as follows:
 1. **_esgreportcrawler_** - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are 'food or hotel' related.  ESG reports are almost always pdf files (rarely .ppt or .pptx). 
 2. **_esgetlpipeline_** - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
 3. **_esg_language model_** - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this). The two endpoints for this model are `answer_question` and `generate_summary`:
