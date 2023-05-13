@@ -118,7 +118,8 @@ To test and serve locally you simply need to navigate to `esg_LanguageModel/weba
 ```python
 uvicorn app:app --reload
 ```
-make certain your (venv) is active or you will encounter errors.
+Follow instructions provided by the server for where the api is hosted. 
+_Note_:make certain your (venv) is active or you will encounter errors.
 
 ### List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
