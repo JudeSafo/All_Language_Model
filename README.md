@@ -44,7 +44,7 @@ After installation you'll want to process and load data into the language model,
 
 To install the `ecocrumb` exec:
 
-1. Open a terminal session on your macOS (cmd + space - search 'terminal') or Linux machine.
+1. Open a terminal session on your macOS (`cmd` + `space` - search 'terminal') or Linux machine.
 
 2. For the most up to date installation from Haiphen (Jude Safo - pi@haiphenia.com):
 
