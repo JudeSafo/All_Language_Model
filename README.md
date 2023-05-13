@@ -3,7 +3,7 @@
 # Ecocrumb - ESG Reporting Handler
 
 To assist with knowledge transfer as we finalize our work I've added a Ecocrumb (End-to-End) executable, `ecococrumb`, a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data,language model training, model hosting and webapp updating. 
-<br>The language model (live here http://18.219.52.58:3000/), one of the key deliverables of this work, accepts a user input text in the form of a question or unfinished thought and returns an answer or summary based on relevant material found in the ESG document. 
+<br><br>The language model (live here http://18.219.52.58:3000/), one of the key deliverables of this work, accepts a user input text in the form of a question or unfinished thought and returns an answer or summary based on relevant material found in the ESG document. 
 
 ![Snip20230506_67](https://github.com/JudeSafo/All_Language_Model/assets/9307673/c3fc1d98-042e-4b7b-a8ee-dfe690a4ed41)
 The project span just over 1 month containing within it, many discrete sub-projects. The sub-folders containing work from the various stages of the project are summarized as follows:
