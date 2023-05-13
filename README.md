@@ -135,7 +135,8 @@ As of Sunday (05/14), I've updated the current production model with the additio
 
 Wishing you both the best in your ESG endeavors👋!
 
-Sincerely, Jude Safo, Haiphen:pi@haiphenai.com 
+Sincerely, Jude Safo 
+Haiphen:pi@haiphenai.com 
 
 ### Miscellaneous
 
