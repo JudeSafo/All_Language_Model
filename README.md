@@ -121,6 +121,9 @@ uvicorn app:app --reload
 Follow instructions provided by the server for where the api is hosted.<br> 
 _Note_:make certain your (venv) is active or you will encounter errors.
 
+### Walk through
+
+
 ### List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
 (pem key provided seperately for security)
