@@ -24,7 +24,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
 
 # Getting Started 
 
-We'll first start off with how to process and load data into the language model, then serving and training. The webapp is provided as is.
+After installation we'll start off with process and load data into the language model, then serving and training. The webapp is provided as is.
 
 ## Requirements
 - macosx
