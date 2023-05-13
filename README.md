@@ -123,7 +123,7 @@ _Note_:make certain your (venv) is active or you will encounter errors.
 
 ### Walk through
 <div align="center">
-  <img src="demo/demo.gif" alt="Demo GIF">
+  <img src="demo/ecocrumb_demo.mov" alt="Demo GIF">
 </div>
 
 ### List of AWS architecture
