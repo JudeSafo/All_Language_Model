@@ -2,7 +2,7 @@
 
 # Ecocrumb - ESG Reporting Handler
 
-The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work. the processing of PDF files to generate topics and parsed sections data. ESG reports are almost always pdf files (rarely .ppt or .pptx). The work contained in the various folders can be summarized as follows:
+The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data and eventually train a language model. ESG reports are almost always pdf files (rarely .ppt or .pptx). The work contained in the various folders can be summarized as follows:
 1. _esgreportcrawler_ - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are good company related
 
 # Getting Started 
