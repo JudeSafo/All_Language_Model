@@ -122,7 +122,8 @@ Follow instructions provided by the server for where the api is hosted.<br>
 _Note_:make certain your (venv) is active or you will encounter errors.
 
 ### Walk through
-https://github.com/JudeSafo/All_Language_Model/assets/9307673/0923a326-c812-40b5-8f8c-dfb1a200e8e6
+https://github.com/JudeSafo/All_Language_Model/assets/9307673/3702b030-5971-4eb6-8541-6fd860849392
+
 
 ### List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
