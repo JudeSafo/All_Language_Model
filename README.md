@@ -4,9 +4,9 @@
 
 The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data and eventually train a language model. ESG reports are almost always pdf files (rarely .ppt or .pptx). 
 The folders contain work from the various stages of the project are summarized as follows:
-1. _esgreportcrawler_ - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are 'food or hotel' related
-2. _esgetlpipeline_ - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
-3. _esg_language model_ - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this). The two endpoints for this model are `answer_question` and `generate_summary`:
+1. **_esgreportcrawler_** - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are 'food or hotel' related
+2. **_esgetlpipeline_** - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
+3. **_esg_language model_** - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this). The two endpoints for this model are `answer_question` and `generate_summary`:
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -d '{
     "text": "Kraft Heinz approach to efficiency projects?",
@@ -20,7 +20,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
     "json_file": "KraftHeinz-2022-ESG-Report_parsed_sections.json"
 }' http://3.133.103.207/answer_question
 ```
-4. _esg_webapp_ - A lightweight next.js wrapper for rendering the language model
+4. **_esg_webapp_** - A lightweight next.js wrapper for rendering the language model in a user friendly interface. 
 
 # Getting Started 
 
