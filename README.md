@@ -3,6 +3,8 @@
 # Ecocrumb - ESG Reporting Handler
 
 The Ecocrumb (End-to-End) executable, `ecococrumb` is a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data and eventually train a language model. ESG reports are almost always pdf files (rarely .ppt or .pptx). 
+
+![Snip20230506_67](https://github.com/JudeSafo/All_Language_Model/assets/9307673/c3fc1d98-042e-4b7b-a8ee-dfe690a4ed41)
 The folders contain work from the various stages of the project are summarized as follows:
 1. **_esgreportcrawler_** - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are 'food or hotel' related
 2. **_esgetlpipeline_** - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
@@ -105,8 +107,10 @@ The default is set to 15. The number is a bit misleading because it the largest 
 
 ## List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
-
+(pem key provided seperately for security)
 
 ## How to fine tune the model over time?
 
-This is 
+The content of esg_LanguageModel folder outline this all work done around model training. Proper fine tuning will gpu or tpu hard drive and additional question/user responses.
+
+
