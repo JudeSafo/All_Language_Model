@@ -127,14 +127,18 @@ _Note_:make certain your (venv) is active or you will encounter errors.
 
 ### How to fine tune the model over time?
 
-The content of esg_LanguageModel folder outline this all work done around model training. Proper fine tuning will gpu or tpu hard drive and additional question/user responses.
+The content of esg_LanguageModel folder outline this all work done around model training. Proper fine tuning will require gpu or tpu hard drive and additional engagement from users to source training data.
 
 ## Conclusion
 
-The biggest focus for you short term should be experimenting with keywords and number of topics. 
-pi@haiphenai.com 
+As of Sunday (05/14), I've updated the current production model with the additional key words (up from 15 to 20). You can play with this as you feel necessary but I would suggest you spend a few days inbetween revisions to thoroughly inspect output from the model. The biggest focus for you short term should be experimenting with keywords and number of topics. In the month spent working on this project I've read through dozens of ESG reports to build my intuition before inspecting the model. As subject matter experts you may not need to do this but there is tremendous value from diving deep into all the material you now have to work with.
+
+Wishing you both the best in your ESG endeavors👋!
+
+Sincerely, Jude Safo, Haiphen:pi@haiphenai.com 
 
 ### Miscellaneous
+
 | Project | Task | Descrip. | Assets | Date |
 |---------|------|----------|--------|------|
 | ESG report entity extraction and report automation | ESG Crawler | Grab raw data | [Github](https://github.com/example), S3, ec2 | 04/08 |
