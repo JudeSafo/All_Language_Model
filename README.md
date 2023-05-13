@@ -67,20 +67,24 @@ Note: Installation has been seperately tested and verified on a `macosx` and `de
 
 ## Basics
 
-Let's process the company `Kellog's` entire ESG report folder and convert this into a machine readable json ending in the suffix _modified_parsed_sections.json_ as well as the topics extracted from that document
-We will use these jsons to pass as arguments to our language model.
+Let's process the company `Kellog's` entire ESG report folder and convert this into a machine readable json ending in the suffix _modified_parsed_sections.json_. We will use these jsons to pass as arguments to our language model.
 
 Run the following:
 ```bash
-(etlpipeline) $ ecocrumb --force --batch --train data/ 100
+(etlpipeline) $ ecocrumb --force --batch --train data/ 20
 ```
 
 here's what each term is doing:
 - `[--force]` optional, overwrite any existing data found in the folder
 - `[--batch]` optional, for processing multiple companies at once. Else specify individual company folder (e.g. data/Starbucks)
-- `[--train]` option, 
+- `[--train]` option, when adding new `topics`, `subtopics` or `entities` to the `pick_esg_topics.csv` file this flag will persist these changes.
+- `data/` this specify the target company folder or set of company folders to process
+- `20`, this specifies the number of subtopics to associate to each major topic. This number can be as large as you chose.
 
-After running you will see updates to the `data`, `results` and `
+Take a look at the 3 subfolders created during this process `plaintext`, `parsed_sections` and `topic_features`. Inspect the content of each folder and compare with your inputs into the `pick_esg_topics.csv` file. 
+
+You will also see updates to the `results` and `esg_languagemodel/webapp/src` folder. This serves the secondary purpose such that the next time you reload your webapp you will now have access to your newly generated company data.
+
 # Add New Company Data
 
 Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on s3, [google drive](url) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
