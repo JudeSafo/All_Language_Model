@@ -62,8 +62,8 @@ Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/e
 
 `Topics` are just expressions you want or expect to see in the ESG report of your company (e.g. "supply chain", "child labor", "employee rights"). They are typically 2 words but not limited to this. They span anywhere from 1 - 4 words. We can change the topics set of topics in 1 of two ways: 
 1. - Add additional keywords manually to the `pick_esg_topics.csv` file then running the exec in training mode `ecocrumb --train data/Starbucks` as follows
-![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/afe1f1f8-d4fd-4d75-b339-95a2a407fc38)
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/25939a33-dba9-4151-8f37-030a643f5290)
+![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/afe1f1f8-d4fd-4d75-b339-95a2a407fc38)
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/d0a3cbd0-5e07-4400-8505-2917017b14fa)
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/9dbeb8f4-1d9d-4900-9b20-8656159bff12)
 
