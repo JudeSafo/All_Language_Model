@@ -126,7 +126,15 @@ The biggest focus for you short term should be experimenting with keywords and n
 pi@haiphenai.com 
 
 ## Miscellaneous
-
-jsons for the remaining reports were saved to the [mongodb db](url) for use in future work should you chose.
+| Project | Task | Descrip. | Assets | Date |
+|---------|------|----------|--------|------|
+| ESG report entity extraction and report automation | [ESG Crawler](https://github.com/example/crawler) | Grab raw data | [Github](https://github.com/example), S3, ec2 | 04/08 |
+| ESG report entity extraction and report automation | [Entity Extraction](https://github.com/example/extraction) | Grab entities/topics, parse data | [Github](https://github.com/example), Mongodb, Instructions | 04/15 |
+| ESG report entity extraction and report automation | [ETL Pipeline](https://github.com/example/pipeline) | Kubernetes deployment of pipeline on EC2 | [Github](https://github.com/example) | 04/20 |
+| ESG report entity extraction and report automation | Metrics | Tfidf sorting, llm rankings |  | 05/05 |
+| ESG report entity extraction and report automation | [LLM](https://github.com/example/llm) | lengthen, shorten, summarize | [Github](https://github.com/example) | 04/28 |
+| ESG report entity extraction and report automation | [Software Bill of Materials](https://github.com/example/bom) | Full list of software used during this | [Github](https://github.com/example) | 04/20 |
+| ESG report entity extraction and report automation | Webapp (Not in original scope) | Interactive webapp | [Github](https://github.com/example) | 05/05 |
+| ESG report entity extraction and report automation | Webapp (Not in original scope) | Interactive webapp | [Github](https://github.com/example) | 05/05 |
 
 
