@@ -34,7 +34,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
 
 ## Getting Started 
 
-After installation you'll want to process and load data into the language model, then use that to serve the mode. 
+After installation you'll want to process and load data into the language model, then use that to serve the model. 
 
 ### Requirements
 - macosx/linux os (Debian preferred)
