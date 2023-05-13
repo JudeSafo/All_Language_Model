@@ -90,7 +90,7 @@ You will also see updates to the `results` and `esg_languagemodel/webapp/src` fo
 Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on [s3]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)), [google drive]([url](https://drive.google.com/drive/u/3/folders/1kMDQ8xlPyx4_-JsBc-3DE0OrBDxVOYOc)) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/170e6e8d-8c65-4340-ade6-da1ff3fe44e1)
 
-## Define/Add Topics
+## How to improve model behavior by adding additional keywords?
 
 `Topics` are just expressions you want or expect to see in the ESG report of your company (e.g. "supply chain", "child labor", "employee rights"). They are typically 2 words but not limited to this. They span anywhere from 1 - 4 words. We can change the topics set of topics in 1 of two ways: 
 1. - Add additional keywords manually to the `pick_esg_topics.csv` file then running the exec in training mode `ecocrumb --train data/Starbucks` as follows
@@ -103,3 +103,10 @@ Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/e
 
 The default is set to 15. The number is a bit misleading because it the largest number of subtopics that can be affiliated with a given topic. The subtopics generation are done via `tfidf` ranking as seen in the `esgetlpipeline/src/utils.py` under TokenTfidfExtractor. In practice anything more than 30 will show signifcant impact on model performance so experiment for yourself first.
 
+## List of AWS architecture
+![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
+
+
+## How to fine tune the model over time?
+
+This is 
