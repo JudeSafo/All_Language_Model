@@ -86,7 +86,7 @@ Run the following:
 here's what each term is doing:
 
 - `data/` this specify the target company folder or set of company folders to process
-- `20`, this specifies the number of subtopics to associate to each major topic. This number can be as large as you chose.
+- `[20]` optional, this specifies the number of subtopics to associate to each major topic. This number can be as large as you chose.
 - `[--force]` optional, overwrite any existing data found in the folder
 - `[--batch]` optional, for processing multiple companies at once. Else specify individual company folder (e.g. data/Starbucks)
 - `[--train]` option, when adding new `topics`, `subtopics` or `entities` to the `pick_esg_topics.csv` file this flag will persist these changes downstream.
