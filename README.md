@@ -87,7 +87,7 @@ You will also see updates to the `results` and `esg_languagemodel/webapp/src` fo
 
 # Add New Company Data
 
-Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on s3, [google drive](url) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
+Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) in the `data` directory of this repo. Currently it contains just `Starbucks` and `Kellogs` to start. Full list available on [s3]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)), [google drive]([url](https://drive.google.com/drive/u/3/folders/1kMDQ8xlPyx4_-JsBc-3DE0OrBDxVOYOc)) and [mongodb]([url](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters))
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/8a826f0e-4e4a-419d-b55c-b2ee39508288)
 
 ## Define/Add Topics
