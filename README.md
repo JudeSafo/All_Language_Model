@@ -45,7 +45,7 @@ and verify documentation
 ```bash
 man ecocrumb
 ```
-![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/af74ffad-238e-44ee-92dc-4b2ccabd06de)
+![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/e5db33b9-6e7b-4156-92b1-093594ae6d21)
 Note: Installation has been seperately tested and verified on a `macosx` and `debian` os.
 
 ## Basics
