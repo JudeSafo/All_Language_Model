@@ -5,7 +5,7 @@
 To assist with knowledge transfer as we finalize our work I've added a Ecocrumb (End-to-End) executable, `ecococrumb`, a command line utility to automate the various aspects of this work: the processing of PDF files to generate topics and parsed sections data,language model training. The language model was one of the key deliverables of this work: accepting a user input text in the form of a question or idea and returning an answer or summary based on relevant material found in the ESG document. 
 
 ![Snip20230506_67](https://github.com/JudeSafo/All_Language_Model/assets/9307673/c3fc1d98-042e-4b7b-a8ee-dfe690a4ed41)
-The folders contain work from the various stages of the project are summarized as follows:
+The sub-folders containing work from the various stages of the project are summarized as follows:
 1. **_esgreportcrawler_** - used to curate the data used for the remainder of this work. In total 924 [ESG reports]([url](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false)) were crawled, 541 of which are 'food or hotel' related.  ESG reports are almost always pdf files (rarely .ppt or .pptx). 
 2. **_esgetlpipeline_** - Core tooling for processing all of the raw ESG pdf data for downstream tasks.
 3. **_esg_language model_** - Core tooling for training, and serving the language model api. These are primarily contained in `llm_esg.py` and `app.py`. Model is hosted via `fastapi` and `uvicorn` on 2 aws ec2 servers (one [production]([url](https://18.219.52.58)), one for [development]([url](https://3.145.190.67))) that are actively running (as of the time of writing this). The two endpoints for this model are `answer_question` and `generate_summary`:
@@ -105,6 +105,14 @@ Copy paste [company folder]([url](https://s3.console.aws.amazon.com/s3/buckets/e
 
 The default is set to 15. The number is a bit misleading because it the largest number of subtopics that can be affiliated with a given topic. The subtopics generation are done via `tfidf` ranking as seen in the `esgetlpipeline/src/utils.py` under TokenTfidfExtractor. In practice anything more than 30 will show signifcant impact on model performance so experiment for yourself first.
 
+## Serving model
+This is largely user preference. 
+To test locally you simply need to navigate to `esg_LanguageModel/webb/src` and run the following:
+```python
+uvicorn app:app --reload
+```
+make certain your (venv) is active or you will encounter errors.
+
 ## List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
 (pem key provided seperately for security)
@@ -112,6 +120,11 @@ The default is set to 15. The number is a bit misleading because it the largest 
 ## How to fine tune the model over time?
 
 The content of esg_LanguageModel folder outline this all work done around model training. Proper fine tuning will gpu or tpu hard drive and additional question/user responses.
+
+# Conclusion
+
+The biggest focus for you short term should be experimenting with keywords and number of topics. 
+pi@haiphenai.com 
 
 ## Miscellaneous
 
