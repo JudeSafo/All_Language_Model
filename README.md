@@ -26,11 +26,11 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
 
 # Getting Started 
 
-After installation we'll start off we'll process and load data into the language model, then focus on serving and training. The webapp is provided as is.
+After installation you'll want to process and load data into the language model, then use that to serve the mode. 
 
 ## Requirements
 - macosx/linux os (Debian preferred)
-- (optional) aws ec2 vm
+- (optional) aws ec2 VM
 
 ## Installation
 
