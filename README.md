@@ -24,7 +24,7 @@ $ curl -X POST -H "Content-Type: application/json" -d '{
 }' http://3.133.103.207/answer_question
 ```
 > **Input:** 
-> `text` field, containing the users query <br>
+> `text` field, containing the user query <br>
 > `mode` field, mode dictates whether to 'lengthen' (by concating input to model summary) or shorten (provide relevant summary) of user input. This  is only relevant for the `generate_summary` endpoint <br>
 >`json_file` field, provides the pointer to the appropriate json representing the ESG company report in question. This allows the model to hotswap  between different company data without having to store each of them in memory.<br> 
 > <br>**Response:**
