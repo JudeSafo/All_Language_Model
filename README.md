@@ -71,7 +71,7 @@ and verify documentation
 man ecocrumb
 ```
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/e5db33b9-6e7b-4156-92b1-093594ae6d21)
-_Note_: Installation has been seperately tested and verified on a `macosx` and `debian` os. If you are unable to run the `exec` as is, substitute `./setup/ecocrumb.sh` in place of `ecocrumb` throughout instructions. 
+_Note_: Installation has been seperately tested and verified on a `macosx` and `debian` os. 
 
 ## Basics
 
