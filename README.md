@@ -152,15 +152,15 @@ Haiphen:pi@haiphenai.com
 | ✅ | ESG report entity extraction and report automation | Question-Answer Model (Not in original scope) | Secondary ml model | [Github](https://github.com/example) | 05/05 |
 | ✅ | ESG report entity extraction and report automation | Automation handler (Not in original scope) | bash exec automate various components of project | [Github](https://github.com/example) | 05/12 |
 
-**Fun Stats**
-Code Base
-> Total lines of code - 1,786,759
-> Word Count - 11,659,299
-> Hours commited - > 500 hours
-Reports
-> ESG Report count - 924 (541 food & hotel companies, 383 others)
-> ESG Company count - 249 (129 food & hotel; 120 others)
-> ESG Page count - on average 25 - 50 pages (max 110)
+**Fun Stats**<br>
+Code Base<br>
+> Total lines of code - 1,786,759<br>
+> Word Count - 11,659,299<br>
+> Hours commited - > 500 hours<br>
+Reports<br>
+> ESG Report count - 924 (541 food & hotel companies, 383 others)<br>
+> ESG Company count - 249 (129 food & hotel; 120 others)<br>
+> ESG Page count - on average 25 - 50 pages (max 110)<br>
 
 
 
