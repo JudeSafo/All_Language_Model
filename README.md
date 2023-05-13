@@ -122,9 +122,7 @@ Follow instructions provided by the server for where the api is hosted.<br>
 _Note_:make certain your (venv) is active or you will encounter errors.
 
 ### Walk through
-<div align="center">
-  <img src="demo/demo.mov" alt="Demo GIF">
-</div>
+https://github.com/JudeSafo/All_Language_Model/blob/master/demo/ecocrumb_demo.mov
 
 ### List of AWS architecture
 ![image](https://github.com/JudeSafo/All_Language_Model/assets/9307673/525107ef-2492-45e0-9551-34e5fedc360f)
