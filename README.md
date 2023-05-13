@@ -20,8 +20,8 @@ To install the `ecocrumb` exec, simply:
    curl -H "Authorization: token YOUR_GITHUB_TOKEN" -o install.sh -sSf https://api.github.com/repos/JudeSafo/All_Language_Model/contents/install.sh | bash
 
    ```
-   or download locally via
+   or download via current repo
 
    ```git
-   git clone https://github.com/ecocrumb/final_deliverables/ && ./install.sh 
+   git clone https://github.com/ecocrumb/esg_deliverables/ && cd esg_deliverables && ./install.sh 
 
