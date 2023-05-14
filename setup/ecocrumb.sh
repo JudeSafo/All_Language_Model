@@ -144,7 +144,7 @@ for file in $plaintext_directory/*.txt; do
   if [ ! -f "$topics_features_file" ] || [ "$force" -eq 1 ]; then
     # Generate topics_features.json
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Generating topics_features.json for $filename"
-    "$SCRIPT_DIR/../esgetlpipeline/src/run_topic_modeling.sh" "$file" 15 "$topics_features_file"
+    "$SCRIPT_DIR/../esgetlpipeline/src/run_topic_modeling.sh" "$file" $num_topics "$topics_features_file"
   else
     echo "$(date +'%Y-%m-%d %H:%M:%S') - Skipping topics_features generation for $filename, file already exists"
   fi
@@ -161,12 +161,5 @@ for file in $plaintext_directory/*.txt; do
 done
 
 # Copy contents of parsed_sections to results/ and esg_LanguageModel/src
-cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/results/"
-cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/../esg_LanguageModel/webapp/src/"
-
-# Store the absolute path in a variable
-#ECOCRUMB_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/setup/./ecocrumb.sh"
-
-# Define the alias using the stored path
-#alias ecocrumb="$ECOCRUMB_PATH"
-#source ~/.bashrc
+cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/../results/"
+cp -r "$parsed_sections_directory"/* "$SCRIPT_DIR/../esg_webapp/webapp/src/"
