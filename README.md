@@ -135,7 +135,7 @@ The content of `esg_LanguageModel` folder outline this all work done around mode
 
 ## Conclusion
 
-As of Sunday (05/14), I've updated the current production model with the additional key words (up from 15 to 20). You can play with this as you feel necessary but I would suggest you spend a few days inbetween revisions to thoroughly inspect output from the model. The biggest focus for you short term should be experimenting with keywords and number of topics. In the month spent working on this project I've read through dozens of ESG reports to build my intuition before inspecting the model. As subject matter experts you may not need to do this but there is tremendous value from diving deep into all the material you now have to work with.
+The biggest focus for you short term should be experimenting with keywords and number of topics. In the month spent working on this project I've read through dozens of ESG reports to build my intuition before inspecting the model. As subject matter experts you may not need to do this but there is tremendous value from diving deep into all the material you now have to work with.
 
 Wishing you both the best in your ESG endeavors👋!
 
