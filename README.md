@@ -146,7 +146,7 @@ Haiphen:pi@haiphenai.com
 
 | Status | Project | Task | Descrip. | Assets | Date |
 |--------|---------|------|----------|--------|------|
-| ✅ | ESG report entity extraction and report automation | ESG Crawler | Grab raw data | [Github](https://github.com/example), S3, ec2 | 04/08 |
+| ✅ | ESG report entity extraction and report automation | ESG Crawler | Grab raw data | [Github](https://github.com/example), S3, mongo | 04/08 |
 | ✅ | ESG report entity extraction and report automation | Entity Extraction | Grab entities/topics, parse data | [Github](https://github.com/example), Mongodb, Instructions | 04/15 |
 | ✅ | ESG report entity extraction and report automation | ETL Pipeline | bash script | [Github](https://github.com/example) | 04/20 |
 | ✅ | ESG report entity extraction and report automation | Metrics | Tfidf sorting, llm rankings | Github | 05/05 |
