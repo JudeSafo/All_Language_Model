@@ -7,7 +7,7 @@ Here are the instructions on how to access it for the first time, including info
 
 ### Background
 
-There are 126 companies and 748 esg reports total in our database.<br>
+There are 229 companies and 924 esg reports total in our database.<br>
 Each company folder contains:
 1. **PDFs**: Anywhere from 1 to 9 _ESG reports_ per company in 'pdf' format (e.g. 'Environmental Report', 'CSR Report', "Impact Report")
 2. **Plaintext**: A `plaintext` file for each `pdf` file that can be read into the 
