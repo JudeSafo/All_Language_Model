@@ -46,7 +46,7 @@ To install the `ecocrumb` exec:
 
 1. Open a terminal session on your macOS (`cmd` + `space` - search 'terminal') or Linux machine.
 
-2. For the most up to date installation from Haiphen (Jude Safo - pi@haiphenia.com):
+2. For the most up to date installation from Haiphen (Jude Safo - pi@haiphenai.com):
 
    ```bash
    curl -H "Authorization: token YOUR_GITHUB_TOKEN" -o install.sh -sSf https://api.github.com/repos/JudeSafo/All_Language_Model/contents/install.sh | bash
