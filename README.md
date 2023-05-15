@@ -146,7 +146,7 @@ Haiphen:pi@haiphenai.com
 
 | Status | Project | Task | Descrip. | Assets | Date |
 |--------|---------|------|----------|--------|------|
-| ✅ | ESG report entity extraction and report automation | ESG Crawler | Grab raw data | [Github](https://github.com/JudeSafo/All_Language_Model/tree/master/esgreportcrawler)), [S3](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false), [mongo](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters)) | 04/08 |
+| ✅ | ESG report entity extraction and report automation | ESG Crawler | Grab raw data | [Github](https://github.com/JudeSafo/All_Language_Model/tree/master/esgreportcrawler), [S3](https://s3.console.aws.amazon.com/s3/buckets/esgreportswebcrawl?region=us-east-2&prefix=esgreports/reports/&showversions=false), [mongo](https://cloud.mongodb.com/v2/6437bc8b8cb5a24d728d1cb4#/clusters) | 04/08 |
 | ✅ | ESG report entity extraction and report automation | Entity Extraction | Grab entities/topics, parse data | [Github](https://github.com/JudeSafo/All_Language_Model/tree/master/esgetlpipeline), [Mongodb](https://github.com/JudeSafo/All_Language_Model/tree/master/esgetlpipeline) | 04/15 |
 | ✅ | ESG report entity extraction and report automation | ETL Pipeline | bash script | [Github](https://github.com/JudeSafo/All_Language_Model/tree/master/esgetlpipeline)) | 04/20 |
 | ✅ | ESG report entity extraction and report automation | Metrics | Tfidf sorting, llm rankings | [Github](https://github.com/JudeSafo/All_Language_Model/blob/master/esgetlpipeline/src/stats.py) | 05/05 |
